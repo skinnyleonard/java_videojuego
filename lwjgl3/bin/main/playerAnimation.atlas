@@ -1,0 +1,11 @@
+playerAnimation.png
+size:128,32
+repeat:none
+corre1
+bounds:0,0,32,32
+corre2
+bounds:64,0,32,32
+corre3
+bounds:32,0,32,32
+corre4
+bounds:96,0,32,32
