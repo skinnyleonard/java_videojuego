@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="240" height="13" tilewidth="64" tileheight="64" infinite="0" nextlayerid="10" nextobjectid="25">
+ <tileset firstgid="1" source="tiles3.tsx"/>
+ <layer id="1" name="background" width="240" height="13">
+  <data encoding="base64" compression="zlib">
+   eJzt2VEKgzAMANCy4bz/jYcfgy2ka6dFGX0PAmKx7U+aqKUAAAAAe92u3gBwyD2JXzkH4BqPJEbOFx05J4BP64lrbTk76pyAWYyusb21M/bV27rLWwB1rz51SSKq5XZ2P17H8Vp/vJZz6z38o1hra/nbU4tb9TIb1x9DXev7T5avrfrbM9eecZhd9v76LXryN/tvlEXrmZ45a/uEGTwBQ+ECxA==
+  </data>
+ </layer>
+ <layer id="2" name="graphics" width="240" height="13">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAAC+BjDAAAE=
+  </data>
+ </layer>
+ <objectgroup id="8" name="ballons">
+  <object id="21" x="1408" y="256" width="64" height="64"/>
+  <object id="22" x="2560" y="320" width="64" height="64"/>
+  <object id="23" x="2944" y="512" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup id="9" name="bricks">
+  <object id="2" x="0" y="768" width="768" height="64"/>
+  <object id="3" x="768" y="640" width="256" height="192"/>
+  <object id="4" x="1024" y="512" width="320" height="320"/>
+  <object id="5" x="1408" y="640" width="128" height="64"/>
+  <object id="6" x="1664" y="576" height="64"/>
+  <object id="7" x="1664" y="576" width="128" height="64"/>
+  <object id="8" x="1600" y="576" width="192" height="64"/>
+  <object id="9" x="1472" y="384" width="320" height="64"/>
+  <object id="10" x="1984" y="576" width="192" height="256"/>
+  <object id="11" x="2304" y="576" width="64" height="64"/>
+  <object id="12" x="2496" y="576" width="192" height="256"/>
+  <object id="13" x="3072" y="768" width="384" height="64"/>
+  <object id="14" x="3200" y="512" width="64" height="64"/>
+  <object id="15" x="3264" y="448" width="192" height="128"/>
+  <object id="16" x="2752" y="384" width="256" height="64"/>
+  <object id="17" x="2816" y="640" width="128" height="64"/>
+ </objectgroup>
+</map>

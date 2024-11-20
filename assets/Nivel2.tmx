@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="240" height="15" tilewidth="64" tileheight="64" infinite="0" nextlayerid="7" nextobjectid="316">
- <tileset firstgid="1" source="Downloads/ads.tsx"/>
+ <tileset firstgid="1" source="tiles.tsx"/>
  <layer id="1" name="Background" width="240" height="15">
   <data encoding="base64" compression="zlib">
    eJztWgGOhDAI9PT2/P+PLyZHQjgGhrbadeMkE1etXYpMC+prWZZXgRqV667kfmK/u+m/uv/w4UxqoOMsVrMvsd4DZMvaubWwtrL73hwQcYRPLLY/RmOWNui8RkvsMJgd659Iz79XAulJcLU9PdB+3Zb/vh6tW4GeE5A2pQ0zn1mbK/r9DuycHet3p8zBFf1uYGvv02a4gHZVaHt0X/b/KtRosQ9dE+lXa1c08wPIojcHYdbfTL+VscyO/ztzA789/+r7sYPtCFp45w571oH/GdmyFvaz+IzmSYRK295cuWf9jWyP7J+tgU9hpt8spx0BsUPTu/f2GMpBmdw08oltk+0j/21gy8D2ie5DpsUsV2bW3x1sW/S7Om0e9msX6fcKZDo6UIn93v+1tUW2H/nPzknSLsuPM//rvP2s3FnbgZ7NZbkHwuzYvzvZ+BOg2jerb1fid6ZfiRGJF1u3ih32uHdMY7RP9bgiX1tEuvFg8/jWbZRbWzsOsvVvNFav34c1ermq9bUcG1nTIkQxMcomATNvtJIZUxTT3vUe7Hun1noX5daeHZWx62s1vJhj/DFbL3fhDMi6yrwLfZm2LKP4QvxpOM/2zYBtO6rezd6Jt4DxSaWvh/P068WF1kAEyctFu1WgayJfePVFdr4H3rN2tk9Wk8y3HSOg650WfIHjs/Xx7oww8t3oAbt+6eOII+eYlvU1O98CpBm2z8q6ynzbUdGwvb+o/q3OC6j2mq2Pd2eljrQ+tuc0bb09IvaZ52IobjJtala+jWTAzoM9c8II9Dzj6Lmv+jll1O/DNjLfNLX2m6Hn+y2dg/eOl9FvFPMyh0Wo+PsMsv5pfX/kwc6rUb8P34uVZ8nVWLQ5+Fmsxv/oOXAmke3oPqD6yIuL2WObxV+rsi4K
   </data>
  </layer>
- <objectgroup id="2" name="bricks">
+ <objectgroup id="1" name="bricks">
   <object id="1" x="704" y="0" width="64" height="960"/>
   <object id="2" x="768" y="768" width="576" height="192"/>
   <object id="3" x="1344" y="896" width="576" height="64"/>
@@ -107,7 +107,7 @@
   <object id="106" x="11072" y="768" width="192" height="64"/>
   <object id="107" x="11136" y="704" width="64" height="64"/>
  </objectgroup>
- <objectgroup id="5" name="spikes">
+ <objectgroup id="4" name="spikes">
   <object id="258" x="1344" y="832" width="576" height="64"/>
   <object id="259" x="2176" y="768" width="256" height="64"/>
   <object id="260" x="1600" y="448" width="64" height="64"/>
@@ -303,7 +303,7 @@
   <object id="240" x="10560" y="320" width="64" height="64"/>
   <object id="241" x="10368" y="704" width="64" height="64"/>
  </objectgroup>
- <objectgroup id="4" name="flags">
+ <objectgroup id="5" name="flags">
   <object id="242" name="flag1" x="1216" y="704" width="64" height="64"/>
   <object id="243" name="flag2" x="2048" y="704" width="64" height="64"/>
   <object id="244" name="flag3" x="1792" y="448" width="64" height="64"/>

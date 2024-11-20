@@ -1,0 +1,17 @@
+tiles3.png
+size:512,64
+repeat:none
+Bloque
+bounds:256,0,64,64
+BloqueS
+bounds:320,0,64,64
+bandera0
+bounds:192,0,64,64
+bandera1
+bounds:0,0,64,64
+globo
+bounds:64,0,64,64
+pincho
+bounds:128,0,64,64
+pinchoInvertido
+bounds:384,0,64,64

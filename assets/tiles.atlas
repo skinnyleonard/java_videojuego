@@ -1,0 +1,11 @@
+tiles.png
+size:256,64
+repeat:none
+Bloque
+bounds:64,0,64,64
+BloqueS
+bounds:128,0,64,64
+corre
+bounds:192,32,32,32
+pincho
+bounds:0,0,64,64
