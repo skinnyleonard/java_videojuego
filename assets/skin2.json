@@ -1,0 +1,26 @@
+{
+"com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle": {
+	"default": {
+		"up": "Salir",
+		"down": "Salir",
+		"over": "Salir",
+		"focused": "Salir",
+		"disabled": "Salir",
+		"checked": "Salir",
+		"checkedOver": "Salir",
+		"checkedDown": "Salir",
+		"checkedFocused": "Salir"
+	},
+	"salir": {
+		"up": "Salir",
+		"down": "Salir",
+		"over": "Salir",
+		"focused": "Salir",
+		"disabled": "Salir",
+		"checked": "Salir",
+		"checkedOver": "Salir",
+		"checkedDown": "Salir",
+		"checkedFocused": "Salir"
+	}
+}
+}

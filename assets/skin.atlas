@@ -1,0 +1,13 @@
+
+skin.png
+size: 2048, 2048
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+Jugar
+  rotate: false
+  xy: 1, 999
+  size: 1500, 500
+  orig: 1500, 500
+  offset: 0, 0
+  index: -1

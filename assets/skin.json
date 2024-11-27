@@ -1,0 +1,26 @@
+{
+"com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle": {
+	"default": {
+		"up": "Jugar",
+		"down": "Jugar",
+		"over": "Jugar",
+		"focused": "Jugar",
+		"disabled": "Jugar",
+		"checked": "Jugar",
+		"checkedOver": "Jugar",
+		"checkedDown": "Jugar",
+		"checkedFocused": "Jugar"
+	},
+	"jugar": {
+		"up": "Jugar",
+		"down": "Jugar",
+		"over": "Jugar",
+		"focused": "Jugar",
+		"disabled": "Jugar",
+		"checked": "Jugar",
+		"checkedOver": "Jugar",
+		"checkedDown": "Jugar",
+		"checkedFocused": "Jugar"
+	}
+}
+}
