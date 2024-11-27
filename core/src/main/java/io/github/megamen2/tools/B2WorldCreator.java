@@ -3,13 +3,9 @@ package io.github.megamen2.tools;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.maps.tiled.TiledMap;
-import com.badlogic.gdx.math.Intersector;
 import com.badlogic.gdx.math.Rectangle;
-import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
-import com.badlogic.gdx.physics.box2d.EdgeShape;
-import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
@@ -19,6 +15,7 @@ import io.github.megamen2.sprites.Ballon;
 import io.github.megamen2.sprites.Brick;
 import io.github.megamen2.sprites.Flag;
 import io.github.megamen2.sprites.Spike;
+import io.github.megamen2.sprites.WinFlag;
 
 public class B2WorldCreator {
 	public B2WorldCreator(World world, TiledMap map) {
@@ -67,6 +64,14 @@ public class B2WorldCreator {
 			Rectangle rect = ((RectangleMapObject) object).getRectangle();
 			
 			new Flag(world, map, rect);
+		}
+		
+		//win_flag
+		for(MapObject object : map.getLayers().get(3).getObjects().getByType(RectangleMapObject.class)) {
+			
+			Rectangle rect = ((RectangleMapObject) object).getRectangle();
+			
+			new WinFlag(world, map, rect);
 		}
 		
 	}

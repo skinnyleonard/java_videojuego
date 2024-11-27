@@ -8,9 +8,9 @@ import com.badlogic.gdx.physics.box2d.World;
 import io.github.megamen2.Main;
 import io.github.megamen2.screens.PlayScreen;
 
-public class Spike extends InteractiveTileObject{
+public class WinFlag extends InteractiveTileObject{
 	private Main game;
-	public Spike(World world, TiledMap map, Rectangle bounds) {
+	public WinFlag(World world, TiledMap map, Rectangle bounds) {
 		super(world, map, bounds);
         fixture.setUserData(this);
 	}
@@ -18,7 +18,7 @@ public class Spike extends InteractiveTileObject{
 	@Override
 	public void onHeadHit() {
 //		Gdx.app.log("spike", "collision");
-		PlayScreen.isDead(true);
+		PlayScreen.isWinner(true);
 		PlayScreen.run.stop();
 	}
 }

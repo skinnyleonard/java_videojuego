@@ -7,12 +7,14 @@ import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.FixtureDef;
+import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
@@ -27,7 +29,7 @@ public class PlayScreen implements Screen{
 	private static Main game;
 	private TextureAtlas atlas;
 	private Texture bg;
-	private Sound run;
+	public static Sound run;
 	private Sound jump;
 	
 	public OrthographicCamera gamecam;
@@ -44,7 +46,15 @@ public class PlayScreen implements Screen{
 	private static int jumpCounter;
 	private Men player;
 	
+	public static Texture bgTex;
+	public static Sprite bgSpr;
+	private SpriteBatch sb;
+	public static String theMap = "map1.tmx";
+	
 	public PlayScreen(Main game) {
+		bgTex = new Texture("back.jpg");
+		bgSpr = new Sprite(bgTex);
+		
 		atlas = new TextureAtlas("mencycle.atlas");
 		bg = new Texture("bg.jfif");
 		this.game = game;
@@ -53,9 +63,11 @@ public class PlayScreen implements Screen{
 		hud = new HUD(game.batch);
 	
 		mapLoader = new TmxMapLoader();
-		map = mapLoader.load("Nivel2.tmx");
+		map = mapLoader.load(theMap);
 		renderer = new OrthogonalTiledMapRenderer(map, 1/Main.PPM);
 		gamecam.position.set(gamePort.getWorldWidth()/2, gamePort.getWorldHeight()/2, 0);
+		
+		sb = new SpriteBatch();
 		
 		world = new World(new Vector2(0, -10), true);
 //		b2dr = new Box2DDebugRenderer();
@@ -66,7 +78,9 @@ public class PlayScreen implements Screen{
 		
 		world.setContactListener(new WorldContactListener());
 		
-		run = Gdx.audio.newSound(Gdx.files.internal("run.mp3"));
+		run = Gdx.audio.newSound(Gdx.files.internal("onplay.mp3"));
+		run.play();
+		
 		jump = Gdx.audio.newSound(Gdx.files.internal("jump.mp3"));
 	}
 	
@@ -103,6 +117,7 @@ public class PlayScreen implements Screen{
 	}
 	
 	public void update (float dt) {
+		
 		handleInput(dt);
 		world.step(1/60f, 6, 2);
 		
@@ -116,13 +131,22 @@ public class PlayScreen implements Screen{
 		renderer.setView(gamecam);
 	}
 	
+	public void renderBg() {
+		bgSpr.draw(sb);
+	}
 	
 	@Override
 	public void render(float delta) {
+		
 		update(delta);
 		
-		Gdx.gl.glClearColor(0, 1, 0, 1);
+		sb.begin();
+		renderBg();
+		sb.end();
+		
+		Gdx.gl.glClearColor(22, 0, 36, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		
 		
 		renderer.render();
 		
@@ -133,7 +157,11 @@ public class PlayScreen implements Screen{
 		player.draw(game.batch);
 		game.batch.end();		
 		game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
+		
+		
+		
 		hud.stage.draw();
+		
 	}
 	
 	@Override
@@ -163,6 +191,7 @@ public class PlayScreen implements Screen{
 		world.dispose();
 //		b2dr.dispose();
 		hud.dispose();
+		run.dispose();
 	}
 	
 	public static void isBonus(boolean check) {
@@ -172,8 +201,20 @@ public class PlayScreen implements Screen{
 	}
 
 	public static void isDead(boolean b) {
+		run.stop();
 		if(b = true) {
+			run.stop();
 			game.setScreen(new PlayScreen((Main) game));
 		}	
+	}
+	
+	public static void isWinner(boolean b) {
+		run.stop();
+		if(b = true) {
+			System.out.println("ganaste");
+			run.stop();
+			game.setScreen(new WinnerScreen((Main) game));
+			run.play();
+		}
 	}
 }

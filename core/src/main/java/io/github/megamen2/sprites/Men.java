@@ -1,5 +1,6 @@
 package io.github.megamen2.sprites;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -12,7 +13,6 @@ import com.badlogic.gdx.physics.box2d.EdgeShape;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
-import com.badlogic.gdx.physics.box2d.joints.FrictionJointDef;
 import com.badlogic.gdx.utils.Array;
 
 import io.github.megamen2.Main;
@@ -116,7 +116,7 @@ public class Men extends Sprite{
 	
 	public void defineMen() {
 		BodyDef bdef = new BodyDef();
-		bdef.position.set(1024/Main.PPM, 128/Main.PPM);
+		bdef.position.set(Main.RESPAWN_X/Main.PPM, Main.RESPAWN_Y/Main.PPM);
 		bdef.type = BodyDef.BodyType.DynamicBody;
 		b2body = world.createBody(bdef);
 		
@@ -126,17 +126,17 @@ public class Men extends Sprite{
 		fdef.filter.categoryBits = Main.MEN_BIT;
 		fdef.filter.maskBits = Main.DEFAULT_BIT | Main.BALLON_BIT;
 		
-//		fdef.friction=10;
 		fdef.shape = shape;
+		fdef.friction=10;
 		
 		b2body.createFixture(fdef).setUserData("head");
 		
-		EdgeShape head = new EdgeShape();
-        head.set(new Vector2(-2/Main.PPM, 7/Main.PPM), new Vector2(2/Main.PPM, 7/Main.PPM));
-        fdef.shape = head;
-        fdef.isSensor= true;
-        
-        b2body.createFixture(fdef).setUserData("head");
+//		EdgeShape head = new EdgeShape();
+//        head.set(new Vector2(-2/Main.PPM, 7/Main.PPM), new Vector2(2/Main.PPM, 7/Main.PPM));
+//        fdef.shape = head;
+//        fdef.isSensor= true;
+//        
+//        b2body.createFixture(fdef).setUserData("head");
 	}
 	
 }

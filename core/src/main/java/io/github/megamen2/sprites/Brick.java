@@ -15,6 +15,5 @@ public class Brick extends InteractiveTileObject {
 	@Override
 	public void onHeadHit() {
 		Gdx.app.log("brick", "collision");
-		
 	}
 }
