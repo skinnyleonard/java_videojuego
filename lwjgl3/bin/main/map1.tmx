@@ -80,12 +80,6 @@
   <object id="72" x="3392" y="512" width="128" height="64"/>
   <object id="73" x="3456" y="576" width="64" height="128"/>
  </objectgroup>
- <objectgroup id="6" name="win_flag">
-  <object id="121" x="3712" y="576" width="64" height="64"/>
- </objectgroup>
- <objectgroup id="3" name="ballons">
-  <object id="122" x="512" y="640" width="64" height="64"/>
- </objectgroup>
  <objectgroup id="4" name="spikes">
   <object id="76" x="896" y="704" width="64" height="64"/>
   <object id="77" x="1216" y="896" width="256" height="64"/>
@@ -116,6 +110,12 @@
   <object id="102" x="4352" y="768" width="64" height="64"/>
   <object id="103" x="4224" y="640" width="64" height="64"/>
   <object id="104" x="4096" y="768" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup id="6" name="win_flag">
+  <object id="121" x="3712" y="576" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup id="3" name="balloons">
+  <object id="122" x="512" y="640" width="64" height="64"/>
  </objectgroup>
  <objectgroup id="5" name="flags">
   <object id="109" name="flag0" x="256" y="768" width="64" height="64"/>
